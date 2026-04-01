@@ -1,0 +1,18 @@
+{
+  "photo": "/images/katerina.jpg",
+  "para1": "Katerina is a graphic designer who found her true passion in the ancient craft of letterpress printing. She set up her studio in Limassol in 2012, drawn by the tactile beauty of type pressed deep into luxurious paper — a sensation no digital process can replicate.",
+  "para2": "Every piece that leaves the studio carries the mark of the press: a slight indent, an honest impression, a reminder that something real was made here. Katerina works closely with clients to design and print pieces that feel as extraordinary as the occasions they celebrate.",
+  "para3": "The studio is located at Salaminos 29 in the heart of Limassol and welcomes visitors by appointment.",
+  "nebiolo": {
+    "title": "The Nebiolo",
+    "era": "Early 1900s · Italian",
+    "desc": "Found by Isidoros next door and rescued from obscurity, this early 20th-century Italian press is now the studio's workhorse. Over a century old and still printing flawlessly.",
+    "photo": "/images/press-nebiolo.jpg"
+  },
+  "harry": {
+    "title": "Harry",
+    "era": "Late 1800s · Golding Jobber",
+    "desc": "A Golding Jobber made near Boston, Harry travelled via South Africa, arriving in Cyprus in 1932. Named with affection, he brings character and history to every impression.",
+    "photo": "/images/press-harry.jpg"
+  }
+}
