@@ -58,7 +58,7 @@ h1, h2, h3, h4 {
   color: var(--mid);
   display: block;
   margin-bottom: 1rem;
-}
+}.meta-label { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--mid); display: block; margin-bottom: 1rem; }
 
 .section-title {
   font-family: 'Space Grotesk', sans-serif;
