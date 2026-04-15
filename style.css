@@ -1,6 +1,6 @@
 /* ============================================================
    LETTERPRESSED Ñ vintageprinting.eu  |  style.css  v2
-   Palette: Cream #F8F4EE | Charcoal #2C2C2C | Gold #C9A84C
+   Palette: Cream #F8F4EE | Charcoal #2C2C2C | Gold #6B7A2C
    Fonts:   Cormorant Garamond + Jost
    ============================================================ */
 
@@ -10,7 +10,7 @@
 :root {
   --cream:    #F8F4EE;
   --charcoal: #2C2C2C;
-  --gold:     #C9A84C;
+  --gold:     #6B7A2C;
   --mid:      #7A7165;
   --border:   #E0D9CF;
   --white:    #FFFFFF;
@@ -67,7 +67,7 @@ p { line-height: 1.85; text-align: justify; }
 .btn--gold {
   background: var(--gold); border-color: var(--gold); color: var(--white);
 }
-.btn--gold:hover { background: #b8923e; border-color: #b8923e; }
+.btn--gold:hover { background: #566220; border-color: #566220; }
 .btn--outline { background: transparent; border-color: var(--charcoal); color: var(--charcoal); }
 .btn--outline:hover { background: var(--charcoal); color: var(--cream); }
 
@@ -364,7 +364,7 @@ p { line-height: 1.85; text-align: justify; }
 
 .svc__num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem; color: rgba(201,168,76,.25);
+  font-size: 3rem; color: rgba(107,122,44,.25);
   line-height: 1; display: block; margin-bottom: 1rem;
   font-weight: 300;
 }
@@ -474,8 +474,8 @@ p { line-height: 1.85; text-align: justify; }
   max-width: 480px; margin-bottom: .75rem;
   text-align: left;
 }
-.shop__intro a { color: var(--gold); border-bottom: 1px solid rgba(201,168,76,.4); }
-.shop__intro a:hover { color: #b8923e; }
+.shop__intro a { color: var(--gold); border-bottom: 1px solid rgba(107,122,44,.4); }
+.shop__intro a:hover { color: #566220; }
 .shop__note {
   display: inline-block;
   font-family: 'Josefin Sans', sans-serif; font-size: .68rem;
@@ -581,7 +581,7 @@ p { line-height: 1.85; text-align: justify; }
 .form-field select:focus,
 .form-field textarea:focus {
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(201,168,76,.1);
+  box-shadow: 0 0 0 3px rgba(107,122,44,.1);
 }
 .form-field textarea { resize: vertical; min-height: 120px; }
 .form__submit { width: 100%; border: none; cursor: pointer; margin-top: .5rem; }
