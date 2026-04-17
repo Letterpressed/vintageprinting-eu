@@ -1,140 +1,59 @@
-# ============================================================
-# Decap CMS Configuration Ñ Letterpressed / vintageprinting.eu
-# ============================================================
-# SETUP NOTES:
-# 1. This config uses Git Gateway backend (works with Netlify Identity).
-#    For Hostinger (no Git Gateway), switch to 'git-gateway' via Netlify
-#    OR use the 'test-repo' backend for local editing.
-# 2. For simple Hostinger hosting without Netlify, consider Sveltia CMS
-#    or use the local_backend option for local editing only.
-# ============================================================
-
 backend:
-  name: git-gateway
+  name: github
+  repo: Letterpressed/vintageprinting-eu
   branch: main
+  base_url: https://sveltia-cms-auth.pages.dev
 
-# For local development / Hostinger-only (no Netlify):
-# Uncomment the lines below and comment out the backend block above
-# local_backend: true
-# backend:
-#   name: test-repo
-
-media_folder: "images"
-public_folder: "/images"
-
-site_url: https://www.vintageprinting.eu
-display_url: https://www.vintageprinting.eu
-logo_url: /images/logo-black.png
+media_folder: images
+public_folder: images
+locale: en
 
 collections:
 
-  # ---- SITE SETTINGS ----
   - name: settings
     label: Site Settings
     files:
-      - name: general
-        label: General Settings
-        file: _data/settings.json
-        fields:
-          - { label: Site Title,       name: site_title,   widget: string,  default: Letterpressed }
-          - { label: Tagline,          name: tagline,      widget: string,  default: "Where Every Print Tells a Story" }
-          - { label: Phone,            name: phone,        widget: string,  default: "+357 25 350 303" }
-          - { label: Email,            name: email,        widget: string,  default: "info@vintageprinting.eu" }
-          - { label: Instagram Handle, name: instagram,    widget: string,  default: "@letterpressed_cy" }
-          - { label: Address Line 1,   name: address1,     widget: string,  default: "Salaminos 29" }
-          - { label: Address Line 2,   name: address2,     widget: string,  default: "Limassol 3036, Cyprus" }
-          - { label: Studio Hours,     name: hours,        widget: string,  default: "Mon-Fri 9:00-13:00, by appointment" }
 
-  # ---- HERO ----
-  - name: hero
-    label: Hero Section
-    files:
-      - name: hero
-        label: Hero Content
-        file: _data/hero.json
+      - name: contact
+        label: Contact & Info
+        file: data/contact.json
         fields:
-          - { label: Hero Eyebrow Text, name: eyebrow,   widget: string }
-          - { label: Hero Title Line 1, name: title1,    widget: string }
-          - { label: Hero Title (italic), name: title2,  widget: string }
-          - { label: Hero Subtitle,     name: subtitle,  widget: text }
-          - { label: Hero Image,        name: image,     widget: image }
-          - { label: Primary CTA Text,  name: cta1_text, widget: string, default: Explore Our Work }
-          - { label: Primary CTA Link,  name: cta1_link, widget: string, default: '#services' }
-          - { label: Secondary CTA Text, name: cta2_text, widget: string, default: Get in Touch }
-          - { label: Secondary CTA Link, name: cta2_link, widget: string, default: '#contact' }
+          - {label: Address, name: address, widget: string}
+          - {label: Phone, name: phone, widget: string}
+          - {label: Phone Link (no spaces), name: phone_link, widget: string, hint: 'e.g. +35725350303'}
+          - {label: Email, name: email, widget: string}
+          - {label: Opening Hours, name: hours, widget: string}
+          - {label: Instagram Handle, name: instagram, widget: string, hint: 'e.g. @letterpressed_cy'}
+          - {label: Instagram URL, name: instagram_url, widget: string}
 
-  # ---- ABOUT ----
-  - name: about
-    label: About Section
-    files:
       - name: about
-        label: About Content
-        file: _data/about.json
+        label: About the Studio
+        file: data/about.json
         fields:
-          - { label: Katerina's Photo,  name: photo,      widget: image }
-          - { label: Paragraph 1,       name: para1,      widget: text }
-          - { label: Paragraph 2,       name: para2,      widget: text }
-          - { label: Paragraph 3,       name: para3,      widget: text }
-          - label: The Nebiolo Press
-            name: nebiolo
-            widget: object
-            fields:
-              - { label: Title, name: title, widget: string, default: The Nebiolo }
-              - { label: Era,   name: era,   widget: string, default: "Early 1900s á Italian" }
-              - { label: Description, name: desc, widget: text }
-              - { label: Photo, name: photo, widget: image }
-          - label: Harry (Golding Jobber)
-            name: harry
-            widget: object
-            fields:
-              - { label: Title, name: title, widget: string, default: Harry }
-              - { label: Era,   name: era,   widget: string, default: "Late 1800s á Golding Jobber" }
-              - { label: Description, name: desc, widget: text }
-              - { label: Photo, name: photo, widget: image }
+          - {label: Section Heading, name: heading, widget: string}
+          - {label: Paragraph 1, name: para1, widget: text}
+          - {label: Paragraph 2, name: para2, widget: text}
+          - {label: Contact Lead Text, name: contact_lead, widget: text}
 
-  # ---- GALLERY ----
+      - name: services
+        label: Services
+        file: data/services.json
+        fields:
+          - label: Services List
+            name: items
+            widget: list
+            fields:
+              - {label: Name, name: name, widget: string}
+              - {label: Description, name: description, widget: text}
+              - {label: Starting Price, name: price, widget: string, hint: 'e.g. From â‚¬120'}
+
   - name: gallery
     label: Gallery
-    label_singular: Gallery Image
-    folder: _data/gallery
+    folder: images/gallery-cms
     create: true
-    slug: "{{year}}-{{month}}-{{slug}}"
+    slug: '{{slug}}'
+    label_singular: Image
     fields:
-      - { label: Title / Caption,  name: title,    widget: string }
-      - { label: Image,            name: image,    widget: image }
-      - { label: Alt Text,         name: alt,      widget: string }
-      - { label: Category,         name: category, widget: select,
-          options: [Wedding Stationery, Business Cards, Custom Prints, Art Prints, Other] }
-      - { label: Featured (show first), name: featured, widget: boolean, default: false }
-      - { label: Sort Order,       name: order,    widget: number, default: 99 }
-
-  # ---- SHOP PRODUCTS ----
-  - name: products
-    label: Shop Products
-    label_singular: Product
-    folder: _data/products
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: Product Name,    name: title,       widget: string }
-      - { label: Product ID,      name: product_id,  widget: string,
-          hint: "Unique ID for Snipcart (no spaces, e.g. art-print-01)" }
-      - { label: Price (EUR),     name: price,       widget: number }
-      - { label: Description,     name: description, widget: text }
-      - { label: Image,           name: image,       widget: image }
-      - { label: In Stock,        name: in_stock,    widget: boolean, default: true }
-      - { label: Sort Order,      name: order,       widget: number, default: 99 }
-
-  # ---- SERVICES ----
-  - name: services
-    label: Services
-    label_singular: Service
-    folder: _data/services
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: Service Name, name: title,       widget: string }
-      - { label: Icon (emoji), name: icon,        widget: string,
-          hint: "Paste a single character or emoji, e.g. ?" }
-      - { label: Description,  name: description, widget: text }
-      - { label: Sort Order,   name: order,       widget: number, default: 99 }
+      - {label: Title, name: title, widget: string}
+      - {label: Image, name: image, widget: image}
+      - {label: Caption, name: caption, widget: string, required: false}

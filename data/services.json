@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "name": "Wedding Stationery",
+      "description": "Invitations, menus, place cards, programmes and on-the-day signage. A complete suite, designed and printed for your most important day.",
+      "price": "From \u20ac150"
+    },
+    {
+      "name": "Business Cards & Corporate",
+      "description": "Make a lasting impression. Letterpress business cards speak before you do \u2014 a physical statement of quality that no digital alternative can match.",
+      "price": "From \u20ac80"
+    },
+    {
+      "name": "Custom Prints & Art",
+      "description": "Limited edition art prints, typographic posters, bespoke keepsakes and special occasion prints. If you can imagine it, we can press it.",
+      "price": "From \u20ac35"
+    },
+    {
+      "name": "Graphic Design",
+      "description": "Every piece starts with thoughtful, considered design. Katerina\u2019s background in graphic design means the concept is as refined as the print.",
+      "price": "From \u20ac60"
+    }
+  ]
+}
