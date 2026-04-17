@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Queensila;
+  src: url('fonts/Queensila.ttf') format('truetype');
+  font-display: swap;
+}
+@font-face {
+  font-family: Nesans;
+  src: url('fonts/Nesans.ttf') format('truetype');
+  font-display: swap;
+}
 /* ============================================================
    LETTERPRESSED Ñ vintageprinting.eu  |  style.css  v2
    Palette: Cream #F8F4EE | Charcoal #2C2C2C | Gold #6B7A2C
@@ -33,7 +43,7 @@ a   { color: inherit; text-decoration: none; transition: var(--trans); }
 
 /* TYPE HIERARCHY */
 h1 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: Queensila, 'Josefin Sans', sans-serif;
   font-weight: 100;
   letter-spacing: .22em;
   text-transform: uppercase;
@@ -47,7 +57,7 @@ h2 {
   line-height: 1.1;
 }
 h3 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: Nesans, 'Josefin Sans', sans-serif;
   font-weight: 700;
   letter-spacing: .18em;
   text-transform: uppercase;
