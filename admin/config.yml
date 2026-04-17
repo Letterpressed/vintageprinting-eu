@@ -2,7 +2,7 @@ backend:
   name: github
   repo: Letterpressed/vintageprinting-eu
   branch: main
-  base_url: https://sveltia-cms-auth.ikolotas.workers.dev
+  auth_type: token
 
 media_folder: images
 public_folder: images
