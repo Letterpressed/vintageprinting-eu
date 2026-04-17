@@ -116,37 +116,9 @@ p { line-height: 1.85; text-align: justify; }
   display: flex; align-items: center; justify-content: space-between;
   max-width: 1400px; margin: 0 auto;
 }
-.nav__logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  color: rgba(255,255,255,.9);
-  transition: var(--trans);
-  text-decoration: none;
-}
-.logo-main {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: .08em;
-  line-height: 1;
-}
-.logo-rule {
-  display: block;
-  width: 52px;
-  height: 2px;
-  background: currentColor;
-  margin: 2px 0;
-}
-.logo-sub {
-  font-family: Georgia, serif;
-  font-style: italic;
-  font-size: .62rem;
-  letter-spacing: .18em;
-  font-weight: 400;
-  line-height: 1;
-}
+.nav__logo { display:flex; align-items:center; text-decoration:none; transition:var(--trans); }
+.nav__logo-img { height:44px; width:auto; filter:brightness(0) invert(1); opacity:.9; transition:var(--trans); }
+.nav__logo:hover .nav__logo-img { opacity:1; }
 .nav.scrolled .nav__logo { color: var(--charcoal); }
 
 .nav__links {
