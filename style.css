@@ -253,7 +253,7 @@ p { line-height: 1.85; text-align: justify; }
   font-size: .6rem; letter-spacing: .18em; text-transform: uppercase;
 }
 .hero__scroll-line {
-  width: 1px; height: 44px; background: rgba(248,244,238,.3);
+  width: 1px; height: 64px; background: rgba(248,244,238,.3);
   animation: scrollPulse 2s ease-in-out infinite;
 }
 @keyframes scrollPulse {
