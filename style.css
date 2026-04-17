@@ -127,7 +127,7 @@ p { line-height: 1.85; text-align: justify; }
   max-width: 1400px; margin: 0 auto;
 }
 .nav__logo { display:flex; align-items:center; text-decoration:none; transition:var(--trans); }
-.nav__logo-img { height:100px; width:auto; filter:brightness(0) invert(1); opacity:.9; transition:var(--trans); }
+.nav__logo-img { height:80px; width:auto; filter:brightness(0) invert(1); opacity:.9; transition:var(--trans); }
 .nav__logo:hover .nav__logo-img { opacity:1; }
 .nav.scrolled .nav__logo { color: var(--charcoal); }
 
@@ -714,4 +714,4 @@ p { line-height: 1.85; text-align: justify; }
   .gallery__grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
   .shop__grid { grid-template-columns: 1fr; }
 }
-@media (min-width:768px) { .nav__logo-img { height:220px; } }
+@media (min-width:768px) { .nav__logo-img { height:130px; } }
