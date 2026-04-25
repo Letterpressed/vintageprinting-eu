@@ -273,9 +273,9 @@ p { line-height: 1.85; text-align: justify; }
 }
 .statement__inner { max-width: 1400px; margin: 0 auto; }
 .statement__text {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(4.5rem, 13vw, 11rem);
-  font-weight: 100;
+  font-weight: 400;
   line-height: 1.0;
   color: var(--charcoal);
   letter-spacing: -.02em;
