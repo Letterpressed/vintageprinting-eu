@@ -9,7 +9,7 @@
   font-display: swap;
 }
 /* ============================================================
-   LETTERPRESSED Ñ vintageprinting.eu  |  style.css  v2
+   LETTERPRESSED ï¿½ vintageprinting.eu  |  style.css  v2
    Palette: Cream #F8F4EE | Charcoal #2C2C2C | Gold #6B7A2C
    Fonts:   Cormorant Garamond + Jost
    ============================================================ */
@@ -43,17 +43,17 @@ a   { color: inherit; text-decoration: none; transition: var(--trans); }
 
 /* TYPE HIERARCHY */
 h1 {
-  font-family: Queensila, 'Josefin Sans', sans-serif;
-  font-weight: 100;
-  letter-spacing: .22em;
-  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  letter-spacing: .04em;
+  text-transform: none;
   line-height: 1.05;
 }
 h2 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 100;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
   font-style: italic;
-  letter-spacing: .06em;
+  letter-spacing: .02em;
   line-height: 1.1;
 }
 h3 {
@@ -181,7 +181,7 @@ p { line-height: 1.85; text-align: justify; }
 }
 
 /* ============================================================
-   HERO Ñ full-bleed video
+   HERO ï¿½ full-bleed video
    ============================================================ */
 .hero {
   position: relative; min-height: 100svh;
@@ -189,7 +189,7 @@ p { line-height: 1.85; text-align: justify; }
   overflow: hidden; background: var(--charcoal);
 }
 
-/* Video container Ñ fills hero */
+/* Video container ï¿½ fills hero */
 .hero__media {
   position: absolute; inset: 0; z-index: 0;
 }
@@ -624,7 +624,7 @@ p { line-height: 1.85; text-align: justify; }
 }
 
 /* ============================================================
-   FOOTER  Ñ  minimal centred (papira.ro style)
+   FOOTER  ï¿½  minimal centred (papira.ro style)
    ============================================================ */
 .footer { background: var(--white); border-top: 1px solid var(--border); }
 
